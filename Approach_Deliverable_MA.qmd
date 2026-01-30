@@ -1,0 +1,22 @@
+---
+title: "Assignment1_MuhammadA"
+author: "Muhammad Ahmad"
+format: html
+editor: visual
+---
+
+# Urban Farming in New York City
+
+## Introductory
+
+A data set I found interesting is from the nyc open data website. This data set with the lengthy title of "*City-owned sites that are available and potentially suitable for urban agriculture***"** contains information about parks and green areas that have potential to become urban farms and or gardens. I will need more information but my current hopes and plans is to use other sources of information to see how realistic it will be to run a farm in the city and how much food would be produce from all the potential space. The food produced from these area can be used to tackle the problem of food deserts in the city where fresh groceries are harder to come by.
+
+## Potential Challenges
+
+Now the data set it self has a couple of problems with missing information, only having 31 entries currently, and not having a postal code nor a full address for some of these locations. The bright side being there is enough information to find or fill in what missing after doing some research of my own. Important information such as area and the code and regulations of the area are present. I will include my own research, this data set, and maybe a second data set if necessary to discover if city ran urban farming could really be done.
+
+### Sources Used
+
+This is the website where I pulled the data from;
+
+<https://data.cityofnewyork.us/Environment/City-owned-sites-that-are-available-and-potentiall/qchy-end3/about_data>
