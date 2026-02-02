@@ -15,8 +15,51 @@ A data set I found interesting is from the nyc open data website. This data set 
 
 Now the data set it self has a couple of problems with missing information, only having 31 entries currently, and not having a postal code nor a full address for some of these locations. The bright side being there is enough information to find or fill in what missing after doing some research of my own. Important information such as area and the code and regulations of the area are present. I will include my own research, this data set, and maybe a second data set if necessary to discover if city ran urban farming could really be done.
 
+### The Data Dictionary
+
+Below is a data dictionary provided by the New York City Parks agency. This informs us what each column is for and what purposes each one serves. Important columns that pretain to what I need are Borough number, Address, Agency, Total Area, and the potential suitability of the site for urban agriculture. The Borough are encoded by number 1= Manhattan, 2= Bronx, 3= Brooklyn, 4= Queens, & 5 =Staten Island. This is important to know because the data set does not hint at what borough you are looking at beside this code. Area and potential suitability are also important. Area gives us an idea of how much space could be available which will be a lot less than the total area given. Potential suitability is a good column to know what are the intend restriction and laws in the area to know how to operate the garden/farm.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(readxl) 
+dic <- read_excel("C:/Users/typem/Downloads/LL46_UrbanAgriculture_DataDictionary_20180726.xlsx", sheet = "Column Info")
+
+dic
+
+```
+
+### The Data
+
+Below is the raw data unedited. When I was calculating the average of the total area among all parks and other urban gardening plans I noticed that one park was an outlier with 100,000 sq ft of space which brought the average to 10,000 sq ft. Without this outlier it would be about 7,500 sq ft per park. The areas that each park can server will help service areas with food deserts.
+
+```{r}
+
+
+data <- read_excel("C:/Users/typem/Desktop/NYC_Parks.xlsx")
+
+data
+
+```
+
+## Conclusions
+
+Reading articles from the city and other urban gardening blogs I believe that there is real possibilities to make a thriving urban city gardening system. While during research I found that New York City has a program called the "green thumb program" this program helps maintain and allocate sites to make urban farming a possibility. Whether this program is helping or not needs to more data. Needless to say with the amount of area and the different types of crops available its a real possibility to grow food. Not only in standard plots of land in parks and green houses but also in hydroponic farms which are not accounted for in this data set. There is a lot more to consider and research but with the amount of land available if there were more parks and green houses in the empty vacant spots in the food deserts areas of the city it will help the issue a lot.
+
 ### Sources Used
 
 This is the website where I pulled the data from;
 
 <https://data.cityofnewyork.us/Environment/City-owned-sites-that-are-available-and-potentiall/qchy-end3/about_data>
+
+This is website talks about the types of crops could grow in an urban environment and their requirements:
+
+<https://www.capitalareafoodbank.org/blog/2019/05/10/what-to-plant-in-your-urban-garden/?utm_referrer=https%3A%2F%2Fwww.google.com%2F>
+
+This is a New York City blog post about urban gardening
+
+<https://libguides.nybg.org/urbangardening>
+
+Fighting urban food desserts with urban gardening
+
+<https://www.pacificresearch.org/greening-the-food-desert-by-farming-vacant-urban-land/>
